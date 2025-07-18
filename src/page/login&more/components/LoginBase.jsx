@@ -6,7 +6,7 @@ const LoginBase = ({ children }) => {
       </div>
       <div className="w-full sm:w-[76%]  h-[80%] lg:h-3/4  bg-white rounded-t-4xl sm:rounded-4xl flex items-center justify-center dark:bg-zinc-900 ">
         {/* dark:bg-zinc-900 */}
-        <div className="w-[95%] mx-auto sm:mx-0 lg:w-1/2 h-full flex items-center justify-center">
+        <div className="w-[95%] mx-auto sm:mx-0 lg:w-1/2 h-full  flex items-center justify-center">
           <div className="w-[410px] h-[95%]">
             <div className="hidden sm:block">
               <img
