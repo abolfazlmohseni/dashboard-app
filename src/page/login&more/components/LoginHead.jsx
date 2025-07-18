@@ -1,6 +1,6 @@
 const LoginHead = ({ titel, subtitel }) => {
   return (
-    <div className="mt-9 sm:mt-16">
+    <div className="mt-7 sm:mt-10">
       <p className="text-dark-100 dark:text-white text-[22px] font-bold">
         {titel}
       </p>

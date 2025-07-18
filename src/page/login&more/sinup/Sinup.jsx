@@ -2,14 +2,27 @@ import { useState } from "react";
 import LoginBase from "../components/LoginBase";
 import LoginHead from "../components/LoginHead";
 import LoginBtn from "../components/LoginBtn";
-
-const Login = () => {
+const Sinup = () => {
   const [showPas, setshowPas] = useState(false);
   return (
     <LoginBase>
-      <LoginHead titel={"Welcome Back!"} subtitel={"Sign in to continue"} />
-
+      <LoginHead titel={"Create an account"} subtitel={"Sign up to continue"} />
       <div className="mt-8 sm:mt-10">
+        <label
+          htmlFor="email"
+          className="text-dark-100 dark:text-white font-bold text-xs"
+        >
+          NAME
+        </label>
+        <div className="flex items-center w-full border-2 border-gray-80/40 h-12 rounded-sm mt-2.5">
+          <input
+            type="text"
+            placeholder="Davin Wong"
+            className="text-gray-100 dark:text-dark-text w-full h-full px-3.5 text-sm outline-0"
+          />
+        </div>
+      </div>
+      <div className="mt-5 sm:mt-5">
         <label
           htmlFor="email"
           className="text-dark-100 dark:text-white font-bold text-xs"
@@ -56,7 +69,7 @@ const Login = () => {
           </svg>
         </div>
       </div>
-      <div className="mt-6">
+      <div className="mt-5">
         <label
           htmlFor="email"
           className="text-dark-100 dark:text-white font-bold text-xs"
@@ -104,22 +117,18 @@ const Login = () => {
           </svg>
         </div>
       </div>
-      <a
-        href="/recoverPass"
-        className="block mt-5 text-sm text-gray-100 dark:text-dark-text"
-      >
-        Forgot Password?
-      </a>
       <LoginBtn
-        classlist={"my-4 sm:my-5 bg-primary-100 text-white"}
-        text={"Login"}
+        classlist={"text-dark-100 bg-Secondary-100 mt-7"}
+        text={"Create an account"}
       />
       <LoginBtn
-        classlist={" text-dark-100 dark:text-white border-2 border-gray-80/20"}
-        text={"Create an account"}
+        classlist={
+          "text-dark-100 dark:text-white border border-gray-100/20 mt-4"
+        }
+        text={"Aready have an account? Login"}
       />
     </LoginBase>
   );
 };
 
-export default Login;
+export default Sinup;
