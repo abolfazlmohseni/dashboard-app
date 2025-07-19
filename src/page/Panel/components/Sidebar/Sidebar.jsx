@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const icons = [
   `<svg
   width="18"
@@ -125,10 +127,25 @@ const bottommenuItem = [
 
 `,
 ];
+
 const Sidebar = () => {
   const activeIndex = 0;
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    document.body.classList.add(theme);
+  }, []);
+  const chageTheme = () => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
   return (
-    <div className="w-screen absolute sm:static bottom-0 bg-white rounded-t-4xl mb-6 sm:m-0 sm:rounded-none sm:w-[165px] sm:h-screen sm:flex sm:flex-col sm:items-center sm:justify-around  ">
+    <div className="w-screen absolute sm:static bottom-0 bg-white dark:bg-darkgray-100 rounded-t-4xl mb-6 sm:m-0 sm:rounded-none sm:w-[165px] sm:h-screen sm:flex sm:flex-col sm:items-center sm:justify-around  ">
       <div className="hidden sm:block">
         <img src="./src/assets/images/icon-menu.png" alt="logo" />
       </div>
@@ -136,10 +153,10 @@ const Sidebar = () => {
         {icons.map((icon, index) => {
           return (
             <div
-              className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+              className={`w-12 h-12 rounded-xl flex items-center justify-center hover:scale-110  transition-all  ${
                 index === activeIndex
                   ? "bg-primary-100 text-white"
-                  : "bg-lightgray-100 text-gray-100 hover:bg-gray-100/15 transition-colors"
+                  : "bg-lightgray-100 text-gray-100 dark:bg-gray-80/20 dark:text-white hover:bg-gray-100/15 "
               } ${index === 5 ? "hidden sm:flex" : ""}`}
             >
               <div
@@ -154,7 +171,10 @@ const Sidebar = () => {
         {bottommenuItem.map((index, icon) => {
           return (
             <div
-              className={`w-12 h-12 rounded-xl flex items-center justify-center border border-gray-100 text-gray-100 hover:border-gray-100/50 transition-colors`}
+              onClick={icon === 0 ? chageTheme : null}
+              className={`${
+                icon === 1 ? "dark:text-white" : ""
+              } w-12 h-12 rounded-xl flex items-center justify-center border-2 border-gray-100 text-gray-100 hover:border-gray-100/50 transition-colors`}
             >
               <div
                 key={index}

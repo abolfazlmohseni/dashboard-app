@@ -20,7 +20,7 @@ const Header = () => {
     );
   return (
     <div className="w-full h-[58px] flex items-center justify-between">
-      <div className="w-80 h-full flex items-center bg-white rounded-xl">
+      <div className="w-80 h-full flex items-center bg-white dark:bg-darkgray-100 rounded-xl">
         <svg
           className="w-[18px] h-[18px] ml-5"
           viewBox="0 0 18 18"
@@ -58,7 +58,7 @@ const Header = () => {
         />
       </div>
       <div className="flex items-center">
-        <span>{info.name}</span>
+        <span className="text-dark dark:text-white">{info.name}</span>
         <div className="w-12 h-12 mr-5 ml-2.5 rounded-2xl overflow-hidden">
           <img src={info.profile} alt={info.name} />
         </div>
