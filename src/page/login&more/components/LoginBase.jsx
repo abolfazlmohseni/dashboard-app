@@ -8,7 +8,7 @@ const LoginBase = ({ children }) => {
         {/* dark:bg-zinc-900 */}
         <div className="w-[95%] mx-auto sm:mx-0 lg:w-1/2 h-full  flex items-center justify-center">
           <div className="w-[410px] h-[95%]">
-            <div className="hidden sm:block">
+            <div className="hidden sm:block mt-16">
               <img
                 src="./src/assets/images/logotypeDark.png"
                 alt="logotypeDark"
