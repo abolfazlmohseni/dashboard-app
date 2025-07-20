@@ -17,7 +17,7 @@ const Selector = ({item}) => {
 
   return (
     <>
-      <div className="inline-flex">
+      <div className="inline-flex mt-16">
         <span
           onClick={() => {
             setSelectorMageag({
@@ -36,7 +36,7 @@ const Selector = ({item}) => {
               : "opacity-0 invisible"
           }`}
         >
-          {inititem.map((item, index) => {
+          {item.map((item, index) => {
             return (
               <p
                 key={index}
