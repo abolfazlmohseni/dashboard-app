@@ -145,14 +145,15 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="w-screen absolute sm:static bottom-0 bg-white dark:bg-darkgray-100 rounded-t-4xl mb-6 sm:m-0 sm:rounded-none sm:w-[165px] sm:h-screen sm:flex sm:flex-col sm:items-center sm:justify-around  ">
+    <div className="w-screen absolute -bottom-0.5 z-50 bg-white dark:bg-darkgray-100 rounded-t-4xl py-6 sm:m-0 sm:rounded-none sm:w-[165px] sm:h-screen sm:flex sm:flex-col sm:items-center sm:justify-around  ">
       <div className="hidden sm:block">
         <img src="./src/assets/images/icon-menu.png" alt="logo" />
       </div>
-      <div className="flex sm:flex-col justify-around sm:justify-center  sm:gap-y-10">
+      <div className="flex sm:flex-col justify-around sm:justify-center sm:gap-y-10">
         {icons.map((icon, index) => {
           return (
             <div
+              key={index}
               className={`w-12 h-12 rounded-xl flex items-center justify-center hover:scale-110  transition-all  ${
                 index === activeIndex
                   ? "bg-primary-100 text-white"
@@ -171,6 +172,7 @@ const Sidebar = () => {
         {bottommenuItem.map((index, icon) => {
           return (
             <div
+              key={icon}
               onClick={icon === 0 ? chageTheme : null}
               className={`${
                 icon === 1 ? "dark:text-white" : ""
