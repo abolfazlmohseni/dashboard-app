@@ -4,14 +4,15 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Selector from "../../../components/Selector";
 import { Suspense, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "../Dashboard";
+import Overview from "../Overview/Overview";
+
 const Main = () => {
   document.body.classList.add("bg-lightgray-100");
   document.body.classList.add("dark:bg-dark-100");
   document.body.classList.add("transition-colors");
   document.body.classList.add("overflow-x-hidden");
 
-  const [StatusModal, setStatusModal] = useState(true);
+  const [StatusModal, setStatusModal] = useState(false);
   const toggleModal = () => {
     setStatusModal(!StatusModal);
   };
@@ -32,6 +33,7 @@ const Main = () => {
                 >
                   <Header />
                   <Selector
+                    asli={true}
                     fontSize={22}
                     mt={"mt-16"}
                     item={[
@@ -41,9 +43,9 @@ const Main = () => {
                       "Trafic Source",
                     ]}
                   />
-                  <Dashboard />
+                  <Overview />
                 </div>
-                {/* <Modal onClick={toggleModal} state={StatusModal}></Modal> */}
+                <Modal onClick={toggleModal} state={StatusModal}></Modal>
               </>
             }
           />

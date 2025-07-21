@@ -1,5 +1,5 @@
 import { LineChart } from "@mui/x-charts";
-import Selector from "../../../../../components/Selector";
+import Selector from "../../../../../../components/Selector";
 
 const BottomCards = ({ data, titel, content, colorChart }) => {
   return (

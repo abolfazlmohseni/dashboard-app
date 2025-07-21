@@ -145,7 +145,7 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="w-screen absolute -bottom-0.5 z-50 bg-white dark:bg-darkgray-100 rounded-t-4xl py-6 sm:m-0 sm:rounded-none sm:w-[165px] sm:h-screen sm:flex sm:flex-col sm:items-center sm:justify-around  ">
+    <div className="w-screen absolute sm:static -bottom-0.5 z-50 bg-white dark:bg-darkgray-100 rounded-t-4xl py-6 sm:m-0 sm:rounded-none sm:w-[165px] sm:h-screen sm:flex sm:flex-col sm:items-center sm:justify-around  ">
       <div className="hidden sm:block">
         <img src="./src/assets/images/icon-menu.png" alt="logo" />
       </div>
