@@ -2,7 +2,7 @@ const MiniCard = () => {
   return (
     <>
       <div className="flex">
-        <div className="bg-white dark:bg-darkgray-100  rounded-xl flex flex-col justify-center items-start w-[33%] px-5 py-8">
+        <div className="bg-white dark:bg-darkgray-100  rounded-xl flex  flex-col justify-center items-start w-[33%] px-5 py-8">
           <div className="w-12 h-12 bg-success-80/20 dark:bg-success-100 text-success-80 dark:text-white flex items-center justify-center rounded-xl ">
             <svg
               width="18"
@@ -26,7 +26,7 @@ const MiniCard = () => {
             Total Sessions
           </p>
         </div>
-        <div className="bg-white dark:bg-darkgray-100 rounded-xl flex flex-col justify-center items-start w-[33%] px-5 py-8 mx-[30px]">
+        <div className="bg-white dark:bg-darkgray-100 rounded-xl flex  flex-col justify-center items-start w-[33%] px-5 py-8 mx-[30px]">
           <div className="w-12 h-12 bg-primary-80/20 text-primary-80 dark:text-white dark:bg-primary-80 flex items-center justify-center rounded-xl ">
             <svg
               width="18"
@@ -67,7 +67,7 @@ const MiniCard = () => {
             Total Visitors
           </p>
         </div>
-        <div className="bg-white dark:bg-darkgray-100 rounded-xl flex flex-col justify-center items-start w-[33%] px-5 py-8">
+        <div className="bg-white dark:bg-darkgray-100 rounded-xl flex  flex-col justify-center items-start w-[33%] px-5 py-8">
           <div className="w-12 h-12 bg-error-80/20 text-error-80 dark:bg-error-80 dark:text-white flex items-center justify-center rounded-xl ">
             <svg
               width="18"

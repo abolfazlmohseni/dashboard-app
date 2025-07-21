@@ -4,14 +4,23 @@ import MiniCard from "./components/MiniCard";
 
 const Dashboard = () => {
   return (
-    <div className="flex mt-10 flex-col w-full">
+    <div className="flex mt-6 flex-col w-full">
       <MiniCard />
       <Card1 />
-      <BottomCards
-        data={[12, 24, 31, 14, 45, 56, 77, 88, 99, 10, 47, 55, 12]}
-        titel={"New Users"}
-        content={"1,501m"}
-      />
+      <div className="w-full flex items-center justify-between mt-[30px] gap-x-7">
+        <BottomCards
+          data={[12, 24, 31, 14, 45, 56, 77, 88, 99, 10, 47, 55, 12]}
+          titel={"New Users"}
+          content={"1,501m"}
+          colorChart={"#E45851"}
+        />
+        <BottomCards
+          data={[12, 24, 31, 14, 45, 56, 77, 88, 99, 10, 47, 55, 12]}
+          titel={"Bounce Rate"}
+          content={"0.66%"}
+          colorChart={"#FDDE69"}
+        />
+      </div>
     </div>
   );
 };

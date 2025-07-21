@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useInfo } from "../../context/Info";
 
-const Selector = ({ item, mt, fontSize }) => {
+const Selector = ({ item, mt, fontSize, addClass = "" }) => {
   const [SelectorMageag, setSelectorMageag] = useState({
     activeIndex: 0,
     isOpen: false,
@@ -25,7 +25,7 @@ const Selector = ({ item, mt, fontSize }) => {
               isOpen: true,
             });
           }}
-          className={`text-[${fontSize}px] font-bold text-dark-100`}
+          className={`text-[${fontSize}px] font-bold text-dark-100 dark:text-white ${addClass}`}
         >
           {item[SelectorMageag.activeIndex]}
         </span>

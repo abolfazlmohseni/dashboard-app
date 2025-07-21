@@ -58,7 +58,7 @@ const Card1 = () => {
 
   useEffect(() => {}, [timeChart]);
   return (
-    <div className="w-full flex flex-col items-start bg-white dark:bg-darkgray-100 mt-8 rounded-xl p-[30px]">
+    <div className="w-full flex flex-col items-start bg-white dark:bg-darkgray-100 mt-6 rounded-xl p-[30px]">
       <div className="w-full flex justify-between items-center ">
         <div>
           <p className="text-dark-100 dark:text-white font-bold">
