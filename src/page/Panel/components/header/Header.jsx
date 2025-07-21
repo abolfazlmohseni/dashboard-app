@@ -1,16 +1,24 @@
 import { useEffect } from "react";
-import { useInfo } from "../../../../context/Info";
-const Header = () => {
-  const { info, setInfo } = useInfo();
+// import { useInfo } from "../../../../context/Info";
 
-  useEffect(() => {
-    setInfo({
-      name: "abolfazl",
-      lastName: "mohseni",
-      token: "login",
-      profile: "./src/assets/images/abolfazlmohseni.jpg",
-    });
-  }, []);
+const info = {
+  name: "abolfazl",
+  lastName: "mohseni",
+  token: "login",
+  profile: "./src/assets/images/abolfazlmohseni.jpg",
+};
+
+const Header = () => {
+  // const { info, setInfo } = useInfo();
+
+  // useEffect(() => {
+  //   setInfo({
+  //     name: "abolfazl",
+  //     lastName: "mohseni",
+  //     token: "login",
+  //     profile: "./src/assets/images/abolfazlmohseni.jpg",
+  //   });
+  // }, []);
 
   if (!info)
     return (

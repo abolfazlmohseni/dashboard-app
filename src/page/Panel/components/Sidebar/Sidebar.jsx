@@ -153,6 +153,7 @@ const Sidebar = () => {
         {icons.map((icon, index) => {
           return (
             <div
+            key={index}
               className={`w-12 h-12 rounded-xl flex items-center justify-center hover:scale-110  transition-all  ${
                 index === activeIndex
                   ? "bg-primary-100 text-white"
@@ -171,6 +172,7 @@ const Sidebar = () => {
         {bottommenuItem.map((index, icon) => {
           return (
             <div
+            key={icon}
               onClick={icon === 0 ? chageTheme : null}
               className={`${
                 icon === 1 ? "dark:text-white" : ""

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useInfo } from "../../context/Info";
 
-const Selector = ({item}) => {
+const Selector = ({ item, mt, fontSize }) => {
   const [SelectorMageag, setSelectorMageag] = useState({
     activeIndex: 0,
     isOpen: false,
@@ -17,7 +17,7 @@ const Selector = ({item}) => {
 
   return (
     <>
-      <div className="inline-flex mt-16">
+      <div className={`inline-flex  relative ${mt}`}>
         <span
           onClick={() => {
             setSelectorMageag({
@@ -25,7 +25,7 @@ const Selector = ({item}) => {
               isOpen: true,
             });
           }}
-          className="text-[22px] font-bold text-dark-100"
+          className={`text-[${fontSize}px] font-bold text-dark-100`}
         >
           {item[SelectorMageag.activeIndex]}
         </span>
@@ -66,7 +66,7 @@ const Selector = ({item}) => {
             isOpen: false,
           });
         }}
-        className={`bg-black/20 w-screen h-screen absolute top-0 left-0 transition-all${
+        className={`bg-black/20 w-screen h-screen fixed top-0 left-0 transition-all${
           SelectorMageag.isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       ></div>
