@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDom from "react-dom/client";
 import Login from "./page/login&more/login/login";
 import Sinup from "./page/login&more/sinup";
@@ -12,9 +12,12 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDom.createRoot(document.querySelector("#root"));
 
 root.render(
-  <BrowserRouter>
+  <StrictMode>
+<BrowserRouter>
     <InfoProvider>
       <Main />
     </InfoProvider>
   </BrowserRouter>
+  </StrictMode>
+  
 );
