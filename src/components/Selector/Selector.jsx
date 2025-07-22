@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useInfo } from "../../context/Info";
 
-const Selector = ({ item, mt, fontSize, addClass = "" }) => {
+const Selector = ({ item, mt, fontSize, addClass = "", asli = false }) => {
   const [SelectorMageag, setSelectorMageag] = useState({
     activeIndex: 0,
     isOpen: false,
@@ -9,10 +9,12 @@ const Selector = ({ item, mt, fontSize, addClass = "" }) => {
   const { info, setInfo } = useInfo();
 
   useEffect(() => {
-    return setInfo({
-      ...info,
-      activePage: SelectorMageag.activeIndex,
-    });
+    if (asli === true) {
+      return setInfo({
+        ...info,
+        activePage: SelectorMageag.activeIndex,
+      });
+    }
   }, [SelectorMageag]);
 
   return (

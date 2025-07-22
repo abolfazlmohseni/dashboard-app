@@ -3,7 +3,9 @@ import { createContext, useContext, useState } from "react";
 const InfoContext = createContext();
 
 export const InfoProvider = ({ children }) => {
-  const [info, setInfo] = useState(null);
+  const [info, setInfo] = useState({
+    activePage: 1,
+  });
 
   return (
     <InfoContext.Provider value={{ info, setInfo }}>
