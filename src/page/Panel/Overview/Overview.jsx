@@ -2,6 +2,7 @@ import React from "react";
 import Dashboard from "./Dashboard";
 import { useInfo } from "../../../context/Info";
 import Realtime from "./Realtime";
+import Audience from "./Audience";
 
 const Overview = () => {
   const { info, setInfo } = useInfo();
@@ -15,7 +16,7 @@ const Overview = () => {
       renderComponent = <Realtime />;
       break;
     case 2:
-      renderComponent = <Dashboard />;
+      renderComponent = <Audience />;
       break;
     case 3:
       renderComponent = <Dashboard />;
