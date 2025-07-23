@@ -55,17 +55,17 @@ const dataCardTwo = [
 const Audience = () => {
   return (
     <div>
-      <div className="flex gap-x-7 mt-10">
+      <div className="flex flex-col sm:flex-row gap-y-5 sm:gap-x-7 mt-10">
         <CardHighlights
-          title={"Returning Customers"}
+          titel={"Returning Customers"}
           value={51}
           color={"FDDE69"}
         />
-        <CardHighlights title={"New Customers"} value={49} color={"6286ED"} />
-        <CardHighlights title={"Bounce Rate"} value={73} color={"62CA76"} />
+        <CardHighlights titel={"New Customers"} value={49} color={"6286ED"} />
+        <CardHighlights titel={"Bounce Rate"} value={73} color={"62CA76"} />
       </div>
       <TopLocations data={dataLocation} />
-      <div className="flex w-full gap-x-7 mt-7">
+      <div className="flex flex-col sm:flex-row w-full gap-y-5 sm:gap-x-7 mt-7 pb-32 sm:pb-0">
         <BottomCard data={dataCardOne} title={"Operating System"} />
         <BottomCard data={dataCardTwo} title={"Top Browser"} />
       </div>

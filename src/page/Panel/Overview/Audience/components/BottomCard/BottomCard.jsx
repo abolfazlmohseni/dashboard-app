@@ -1,6 +1,6 @@
 const BottomCard = ({ title, data }) => {
   return (
-    <div className="w-1/2 bg-white dark:bg-darkgray-100 rounded-xl px-5 py-7">
+    <div className="w-full sm:w-1/2 bg-white dark:bg-darkgray-100 rounded-xl px-5 py-7">
       <p className="font-bold text-dark-100 dark:text-white">{title}</p>
       <div className="w-full divide-y divide-gray-80/20 ">
         {data.map((item) => {

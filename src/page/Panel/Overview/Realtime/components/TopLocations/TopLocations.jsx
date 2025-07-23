@@ -1,6 +1,6 @@
 const TopLocations = () => {
   return (
-    <div className="w-1/2 px-5 pt-[30px] pb-10 bg-white dark:bg-darkgray-100 rounded-xl">
+    <div className="hidden sm:block w-1/2 px-5 pt-[30px] pb-10 bg-white dark:bg-darkgray-100 rounded-xl">
       <p className="text-[22px] text-dark-100 font-bold dark:text-white mb-10">
         Top Locations
       </p>

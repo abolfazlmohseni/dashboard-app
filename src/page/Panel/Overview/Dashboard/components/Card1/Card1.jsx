@@ -56,7 +56,6 @@ const dataFrime = [
 const Card1 = () => {
   const [timeChart, setTimeChart] = useState(0);
 
-  useEffect(() => {}, [timeChart]);
   return (
     <div className="w-full flex flex-col items-start bg-white dark:bg-darkgray-100 mt-6 rounded-xl p-[30px]">
       <div className="w-full flex justify-between items-center ">
@@ -83,7 +82,7 @@ const Card1 = () => {
               );
             })}
           </div>
-          <button className="flex items-center gap-x-1.5 text-white bg-success-100 px-2.5 py-1 rounded-sm dark:text-dark-100">
+          <button className=" hidden md:flex items-center gap-x-1.5 text-white bg-success-100 px-2.5 py-1 rounded-sm dark:text-dark-100">
             <svg
               width="14"
               height="14"

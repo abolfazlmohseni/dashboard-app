@@ -6,7 +6,7 @@ const Sinup = () => {
   const [showPas, setshowPas] = useState(false);
   return (
     <LoginBase>
-      <LoginHead titel={"Create an account"} subtitel={"Sign up to continue"} />
+      <LoginHead titel={"Create an account"} subtitel={"Sign up to continue"}  />
       <div className="mt-8 sm:mt-10">
         <label
           htmlFor="email"
@@ -25,7 +25,7 @@ const Sinup = () => {
       <div className="mt-5 sm:mt-5">
         <label
           htmlFor="email"
-          className="text-dark-100 dark:text-white font-bold text-xs"
+          className="text-dark-100 dark:text-white font-bold text-xs "
         >
           EMAIL
         </label>
@@ -76,7 +76,7 @@ const Sinup = () => {
         >
           password
         </label>
-        <div className="flex items-center w-full border-2 border-gray-80/40 h-12 rounded-sm mt-2">
+        <div className="flex items-center w-full border-2 border-gray-80/40 h-12 rounded-sm mt-1.5">
           <input
             type={showPas ? "text" : "password"}
             className="text-gray-100 dark:text-dark-text w-full h-full px-3.5 text-sm outline-0"
@@ -118,12 +118,12 @@ const Sinup = () => {
         </div>
       </div>
       <LoginBtn
-        classlist={"text-dark-100 bg-Secondary-100 mt-7"}
+        classlist={"text-dark-100 bg-Secondary-100 mt-3"}
         text={"Create an account"}
       />
       <LoginBtn
         classlist={
-          "text-dark-100 dark:text-white border border-gray-100/20 mt-4"
+          "text-dark-100 dark:text-white border border-gray-100/20 mt-3"
         }
         text={"Aready have an account? Login"}
       />
