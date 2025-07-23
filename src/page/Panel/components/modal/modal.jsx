@@ -1,9 +1,9 @@
 const Modal = ({ children, onClick, state }) => {
   return (
     <div
-      className={`flex sm:flex-row h-[70%] ${
-        state ? "sm:w-[20%] min-w-[250px]" : "sm:w-[2%]"
-      }    sm:h-screen flex-col justify-end items-center sm:fixed sm:top-0 sm:right-0`}
+      className={`flex sm:flex-row sm:h-[70%] ${
+        state ? "sm:w-[20%] sm:min-w-[250px] h-[80%]" : "sm:w-[2%] h-[12%]"
+      }    sm:h-screen flex-col justify-end items-center fixed bottom-0 sm:top-0 sm:right-0 z-40 transition-all duration-300`}
     >
       <div
         onClick={onClick}

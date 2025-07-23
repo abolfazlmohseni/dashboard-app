@@ -27,8 +27,8 @@ const Header = () => {
       </div>
     );
   return (
-    <div className="w-full h-[58px] flex items-center justify-between">
-      <div className="w-80 h-full flex items-center bg-white dark:bg-darkgray-100 rounded-xl">
+    <div className="w-full h-[58px] flex items-center justify-end sm:justify-between mt-2.5 sm:mt-0">
+      <div className="hidden sm:flex w-80 h-full items-center bg-white dark:bg-darkgray-100 rounded-xl">
         <svg
           className="w-[18px] h-[18px] ml-5"
           viewBox="0 0 18 18"

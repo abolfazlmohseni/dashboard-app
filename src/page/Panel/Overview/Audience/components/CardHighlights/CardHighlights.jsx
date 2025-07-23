@@ -3,7 +3,7 @@ import Selector from "../../../../../../components/Selector";
 
 const CardHighlights = ({ titel, color, value }) => {
   return (
-    <div className="flex items-center  bg-white dark:bg-darkgray-100 py-8 px-5 w-1/3 rounded-xl">
+    <div className="flex  items-center justify-around bg-white dark:bg-darkgray-100 py-8 px-5 w-full sm:w-1/3 rounded-xl">
       <div>
         <p className="text-dark-100 dark:text-white w-1/2 font-bold ">
           {titel}

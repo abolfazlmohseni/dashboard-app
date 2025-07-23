@@ -1,6 +1,6 @@
 const RightNow = ({ numOne, numTwo }) => {
   return (
-    <div className="bg-white dark:bg-darkgray-100 w-1/2 rounded-xl py-7 px-5">
+    <div className="bg-white dark:bg-darkgray-100 w-full sm:w-1/2 rounded-xl py-7 px-5">
       <p className="text-dark-100 dark:text-white text-[22px] font-bold">
         Right Now
       </p>

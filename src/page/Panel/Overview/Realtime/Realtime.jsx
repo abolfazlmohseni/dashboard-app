@@ -12,7 +12,7 @@ const Realtime = () => {
         <RightNow numOne={"43%"} numTwo={"57%"} />
         <TopLocations />
       </div>
-      <div className="w-full bg-white dark:bg-darkgray-100 mt-[30px] rounded-xl px-5 py-[30px]">
+      <div className="w-full bg-white dark:bg-darkgray-100 mt-[30px] rounded-xl px-5 py-[30px] pb-32 sm:pb-0">
         <div className="flex items-center justify-between">
           <div>
             <p className="font-bold text-dark-100 text-xl dark:text-white">
@@ -56,7 +56,7 @@ const Realtime = () => {
             <p>Organic Search</p>
           </div>
         </div>
-        <div className="flex justify-around w-[95%] mx-auto">
+        <div className="flex justify-around gap-x-3.5 sm:gap-0 w-[95%] mx-auto overflow-x-hidden">
           <div className="flex items-center flex-col mt-10">
             <div className="h-60">
               <div className="w-2.5 h-1/3 bg-error-100 rounded-t-xl"></div>

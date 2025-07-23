@@ -3,7 +3,7 @@ import Selector from "../../../../../../components/Selector";
 
 const BottomCards = ({ data, titel, content, colorChart }) => {
   return (
-    <div className="w-1/2 bg-white dark:bg-darkgray-100 rounded-xl px-5 pt-6 pb-7">
+    <div className="w-full md:w-1/2 bg-white dark:bg-darkgray-100 rounded-xl px-5 pt-6 pb-7">
       <div className="flex justify-between items-center">
         <p className="font-bold text-dark-100 dark:text-white">{titel}</p>
         <Selector
