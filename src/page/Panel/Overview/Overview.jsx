@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard";
 import { useInfo } from "../../../context/Info";
 import Realtime from "./Realtime";
 import Audience from "./Audience";
+import TraficSource from "./TraficSource/TraficSource";
 
 const Overview = () => {
   const { info, setInfo } = useInfo();
@@ -19,7 +20,7 @@ const Overview = () => {
       renderComponent = <Audience />;
       break;
     case 3:
-      renderComponent = <Dashboard />;
+      renderComponent = <TraficSource />;
       break;
     default:
       renderComponent = <div>not Page</div>;
