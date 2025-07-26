@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const icons = [
   `<svg
@@ -127,9 +128,9 @@ const bottommenuItem = [
 
 `,
 ];
-
+const links = ["/dashborad", "/GroupChat", "/", "/", "/", "/"];
 const Sidebar = () => {
-  const activeIndex = 0;
+  const [ActiveIndex, setActiveIndex] = useState(0);
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     document.body.classList.add(theme);
@@ -145,26 +146,28 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="w-screen fixed sm:static -bottom-0.5 z-50 bg-white dark:bg-darkgray-100 rounded-t-4xl py-6 sm:m-0 sm:rounded-none sm:w-[165px] sm:h-full sm:flex sm:flex-col sm:items-center sm:justify-around  ">
+    <div className="w-screen fixed sm:static -bottom-0.5 z-50 bg-white dark:bg-darkgray-100 rounded-t-4xl py-6 sm:m-0 sm:rounded-none sm:w-[11.5%] sm:h-full sm:flex sm:flex-col sm:items-center sm:justify-around  ">
       <div className="hidden sm:block">
         <img src="./src/assets/images/icon-menu.png" alt="logo" />
       </div>
       <div className="flex sm:flex-col justify-around sm:justify-center sm:gap-y-10">
         {icons.map((icon, index) => {
           return (
-            <div
-              key={index}
-              className={`w-12 h-12 rounded-xl flex items-center justify-center hover:scale-110  transition-all  ${
-                index === activeIndex
-                  ? "bg-primary-100 text-white"
-                  : "bg-lightgray-100 text-gray-100 dark:bg-gray-80/20 dark:text-white hover:bg-gray-100/15 "
-              } ${index === 5 ? "hidden sm:flex" : ""}`}
-            >
+            <Link key={index} to={links[index]}>
               <div
-                key={index}
-                dangerouslySetInnerHTML={{ __html: icons[index] }}
-              ></div>
-            </div>
+                onClick={() => {
+                  setActiveIndex(index);
+                  console.log(ActiveIndex);
+                }}
+                className={`w-12 h-12 rounded-xl flex items-center justify-center hover:scale-110  transition-all  ${
+                  index === ActiveIndex
+                    ? "bg-primary-100 text-white"
+                    : "bg-lightgray-100 text-gray-100 dark:bg-gray-80/20 dark:text-white hover:bg-gray-100/15 "
+                } ${index === 5 ? "hidden sm:flex" : ""}`}
+              >
+                <div dangerouslySetInnerHTML={{ __html: icons[index] }}></div>
+              </div>
+            </Link>
           );
         })}
       </div>

@@ -7,6 +7,8 @@ import { Route, Routes } from "react-router-dom";
 import Overview from "../Overview/Overview";
 import Login from "../../login&more/login";
 import Sinup from "../../login&more/sinup";
+import GroupChat from "../GroupChat/GroupChat";
+import ChannelsPanel from "../GroupChat/Components/ChannelsPanel";
 const Main = () => {
   document.body.classList.add("bg-lightgray-100");
   document.body.classList.add("dark:bg-dark-100");
@@ -50,7 +52,26 @@ const Main = () => {
               </>
             }
           />
+          <Route
+            path="/groupchat"
+            element={
+              <>
+                <Sidebar />
+                <ChannelsPanel />
+                <div
+                  className={`${
+                    StatusModal ? "sm:w-[44%]" : "sm:w-full"
+                  }  mx-6 md:mx-16 h-[92vh] transition-all duration-300 w-[76%]`}
+                >
+                  <Header />
+                  <GroupChat />
+                </div>
+                <Modal onClick={toggleModal} state={StatusModal}></Modal>
+              </>
+            }
+          />
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/sinup" element={<Sinup />} />
         </Routes>
       </Suspense>
