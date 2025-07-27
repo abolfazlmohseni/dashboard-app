@@ -1,5 +1,6 @@
 import { useInfo } from "../../../context/Info";
 import Chat from "./Chat";
+import TraficSource from "./TraficSource/TraficSource";
 
 const Overview = () => {
   const { info, setInfo } = useInfo();
@@ -9,7 +10,7 @@ const Overview = () => {
       renderComponent = <Chat />;
       break;
     case 1:
-      renderComponent = <Chat />;
+      renderComponent = <TraficSource />;
       break;
     case 2:
       renderComponent = <Chat />;

@@ -4,7 +4,7 @@ const InfoContext = createContext();
 
 export const InfoProvider = ({ children }) => {
   const [info, setInfo] = useState({
-    activePage: 1,
+    activePage: 0,
   });
 
   return (
