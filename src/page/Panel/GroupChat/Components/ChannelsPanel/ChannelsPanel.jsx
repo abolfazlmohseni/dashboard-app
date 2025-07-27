@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Selector from "../../../../../components/Selector";
-
+import { useInfo } from "../../../../../context/Info";
 const titels = ["Started", "Channels", "Direct Messages"];
 const Started = [
   {
@@ -69,7 +69,10 @@ const Direct = [
   },
 ];
 const ChannelsPanel = () => {
-  const [Elem, setElem] = useState();
+  const { info, setInfo } = useInfo();
+  if (info.activePage === 1) {
+    return <div></div>;
+  }
   return (
     <div className="min-w-[20%] max-w-[20%] h-full bg-white dark:bg-darkgray-100 px-5 border-l-2 border-l-gray-100/20">
       <Selector
@@ -85,7 +88,7 @@ const ChannelsPanel = () => {
               {titels[0]}
             </p>
             {Started.map((item) => {
-              if (Elem == item.id) {
+              if (info.chatId == item.id) {
                 return (
                   <p
                     key={item.id}
@@ -97,7 +100,7 @@ const ChannelsPanel = () => {
               } else if (item.number != 0) {
                 return (
                   <div
-                    onClick={() => setElem(item.id)}
+                    onClick={() => setInfo({ ...info, chatId: item.id })}
                     key={item.id}
                     className="flex items-center justify-between py-2.5 pl-2.5"
                   >
@@ -112,7 +115,7 @@ const ChannelsPanel = () => {
               } else {
                 return (
                   <p
-                    onClick={() => setElem(item.id)}
+                    onClick={() => setInfo({ ...info, chatId: item.id })}
                     key={item.id}
                     className="text-sm text-gray-100 py-2.5 pl-2.5"
                   >
@@ -127,7 +130,7 @@ const ChannelsPanel = () => {
               {titels[1]}
             </p>
             {Channels.map((item) => {
-              if (Elem == item.id) {
+              if (info.chatId == item.id) {
                 return (
                   <p
                     key={item.id}
@@ -139,7 +142,7 @@ const ChannelsPanel = () => {
               } else if (item.number != 0) {
                 return (
                   <div
-                    onClick={() => setElem(item.id)}
+                    onClick={() => setInfo({ ...info, chatId: item.id })}
                     key={item.id}
                     className="flex items-center justify-between py-2.5 pl-2.5"
                   >
@@ -154,7 +157,7 @@ const ChannelsPanel = () => {
               } else {
                 return (
                   <p
-                    onClick={() => setElem(item.id)}
+                    onClick={() => setInfo({ ...info, chatId: item.id })}
                     key={item.id}
                     className="text-sm text-gray-100 py-2.5 pl-2.5"
                   >
@@ -169,7 +172,7 @@ const ChannelsPanel = () => {
               {titels[2]}
             </p>
             {Direct.map((item) => {
-              if (Elem == item.id) {
+              if (info.chatId == item.id) {
                 return (
                   <p
                     key={item.id}
@@ -181,7 +184,7 @@ const ChannelsPanel = () => {
               } else if (item.number != 0) {
                 return (
                   <div
-                    onClick={() => setElem(item.id)}
+                    onClick={() => setInfo({ ...info, chatId: item.id })}
                     key={item.id}
                     className="flex items-center justify-between py-2.5 pl-2.5"
                   >
@@ -196,7 +199,7 @@ const ChannelsPanel = () => {
               } else {
                 return (
                   <p
-                    onClick={() => setElem(item.id)}
+                    onClick={() => setInfo({ ...info, chatId: item.id })}
                     key={item.id}
                     className="text-sm text-gray-100 py-2.5 pl-2.5"
                   >

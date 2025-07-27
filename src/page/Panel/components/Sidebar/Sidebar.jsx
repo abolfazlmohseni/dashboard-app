@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useInfo } from "../../../../context/Info";
 
 const icons = [
   `<svg
@@ -101,6 +102,7 @@ const icons = [
 
 `,
 ];
+const pash = ["/dashborad", "/GroupChat"];
 const bottommenuItem = [
   `
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,11 +132,18 @@ const bottommenuItem = [
 ];
 const links = ["/dashborad", "/GroupChat", "/", "/", "/", "/"];
 const Sidebar = () => {
-  const [ActiveIndex, setActiveIndex] = useState(0);
+  const { pathname } = useLocation();
+  const { info, setInfo } = useInfo();
+
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     document.body.classList.add(theme);
-  }, []);
+
+    setInfo({
+      ...info,
+      activePage: 0,
+    });
+  }, [pathname]);
   const chageTheme = () => {
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
@@ -153,14 +162,19 @@ const Sidebar = () => {
       <div className="flex sm:flex-col justify-around sm:justify-center sm:gap-y-10">
         {icons.map((icon, index) => {
           return (
-            <Link key={index} to={links[index]}>
+            <Link
+              key={index}
+              to={links[index]}
+              // onClick={() => {
+              //   setInfo({
+              //     ...info,
+              //     activePage: 0,
+              //   });
+              // }}
+            >
               <div
-                onClick={() => {
-                  setActiveIndex(index);
-                  console.log(ActiveIndex);
-                }}
                 className={`w-12 h-12 rounded-xl flex items-center justify-center hover:scale-110  transition-all  ${
-                  index === ActiveIndex
+                  pash[index] === pathname
                     ? "bg-primary-100 text-white"
                     : "bg-lightgray-100 text-gray-100 dark:bg-gray-80/20 dark:text-white hover:bg-gray-100/15 "
                 } ${index === 5 ? "hidden sm:flex" : ""}`}

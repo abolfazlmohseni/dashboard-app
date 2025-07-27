@@ -4,7 +4,6 @@ import TopLocations from "./components/TopLocations";
 
 const Realtime = () => {
   const [TimeChart, setTimeChart] = useState("Per Minute");
-  console.log(TimeChart);
 
   return (
     <div className="mt-10">
