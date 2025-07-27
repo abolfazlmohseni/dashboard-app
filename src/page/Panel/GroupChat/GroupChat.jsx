@@ -22,7 +22,7 @@ const Overview = () => {
       break;
   }
 
-  return <div>{renderComponent}</div>;
+  return renderComponent;
 };
 
 export default Overview;
