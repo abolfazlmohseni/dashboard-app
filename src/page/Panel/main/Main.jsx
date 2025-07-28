@@ -30,24 +30,7 @@ const Main = () => {
             <Overview StatusModal={StatusModal} toggleModal={toggleModal} />
           }
         />
-        <Route
-          path="/GroupChat"
-          element={
-            <>
-              <Sidebar />
-              <ChannelsPanel />
-              <div
-                className={`${
-                  StatusModal ? "sm:w-[44%]" : "sm:w-full"
-                }  mx-6 md:mx-16 h-[92vh] transition-all duration-300 w-[76%]`}
-              >
-                <Header />
-                <GroupChat />
-              </div>
-              <Modal onClick={toggleModal} state={StatusModal}></Modal>
-            </>
-          }
-        />
+        <Route path="/GroupChat" element={<GroupChat StatusModal={StatusModal} toggleModal={toggleModal}/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Login />} />
         <Route path="/sinup" element={<Sinup />} />

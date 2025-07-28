@@ -9,7 +9,6 @@ const TraficSource = () => {
         mt={"mt-14"}
         item={["Chat", "Trafic Source", "Inbox"]}
       />
-      dfkad;lfgnsdf;nsdfgkjnserfgijnsrflkgjnserfgiunwsrfpbijnsrtpbunwsrpbnwrtpigjnsrptibunsfdpiubbsfpibunrtiu   
     </div>
   );
 };
