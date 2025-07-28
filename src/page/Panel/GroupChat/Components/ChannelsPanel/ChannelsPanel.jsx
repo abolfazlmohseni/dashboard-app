@@ -70,9 +70,6 @@ const Direct = [
 ];
 const ChannelsPanel = () => {
   const { info, setInfo } = useInfo();
-  if (info.activePage === 1) {
-    return <div></div>;
-  }
   return (
     <div className="min-w-[20%] max-w-[20%] h-full bg-white dark:bg-darkgray-100 px-5 border-l-2 border-l-gray-100/20">
       <Selector

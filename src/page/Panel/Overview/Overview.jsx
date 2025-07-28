@@ -13,25 +13,6 @@ const Overview = ({ toggleModal, StatusModal }) => {
   const { info, setInfo } = useInfo();
   var renderComponent;
 
-  // <>
-  //   <Sidebar />
-  //   <div
-  //     className={`${
-  //       StatusModal ? "sm:w-[65%]" : "sm:w-full"
-  //     }  mx-6 md:mx-16 h-[92vh] transition-all duration-300 w-[95%]`}
-  //   >
-  //     <Header />
-  //     <Selector
-  //       asli={true}
-  //       fontSize={22}
-  //       mt={"mt-16"}
-  //       item={["Dashboard", "Realtime", "Audience", "Trafic Source"]}
-  //     />
-  //     <Overview />
-  //   </div>
-  //   <Modal onClick={toggleModal} state={StatusModal}></Modal>
-  // </>;
-
   switch (info.activePage) {
     case 0:
       renderComponent = (
@@ -82,10 +63,52 @@ const Overview = ({ toggleModal, StatusModal }) => {
       );
       break;
     case 2:
-      renderComponent = <Audience />;
+      renderComponent = (
+        <>
+          <div className="flex flex-col h-screen w-full sm:flex-row  items-center relative">
+            <Sidebar />
+            <div
+              className={`${
+                StatusModal ? "sm:w-[65%]" : "sm:w-full"
+              }  mx-6 md:mx-16 h-[92vh] transition-all duration-300 w-[95%]`}
+            >
+              <Header />
+              <Selector
+                asli={true}
+                fontSize={22}
+                mt={"mt-16"}
+                item={["Dashboard", "Realtime", "Audience", "Trafic Source"]}
+              />
+              <Audience />
+            </div>
+            <Modal onClick={toggleModal} state={StatusModal}></Modal>
+          </div>
+        </>
+      );
       break;
     case 3:
-      renderComponent = <TraficSource />;
+      renderComponent = (
+        <>
+          <div className="flex flex-col h-screen w-full sm:flex-row  items-center relative">
+            <Sidebar />
+            <div
+              className={`${
+                StatusModal ? "sm:w-[65%]" : "sm:w-full"
+              }  mx-6 md:mx-16 h-[92vh] transition-all duration-300 w-[95%]`}
+            >
+              <Header />
+              <Selector
+                asli={true}
+                fontSize={22}
+                mt={"mt-16"}
+                item={["Dashboard", "Realtime", "Audience", "Trafic Source"]}
+              />
+              <TraficSource />
+            </div>
+            <Modal onClick={toggleModal} state={StatusModal}></Modal>
+          </div>
+        </>
+      );
       break;
     default:
       renderComponent = <div>not Page</div>;
