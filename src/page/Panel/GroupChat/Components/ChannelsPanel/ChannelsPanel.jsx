@@ -81,7 +81,7 @@ const ChannelsPanel = () => {
       <div className="mt-16">
         <div className="flex flex-col gap-y-4 divide-y divide-gray-100/20">
           <div>
-            <p className="text-sm text-dark-100 font-bold py-2.5 pl-2.5">
+            <p className="text-sm text-dark-100 dark:text-gray-100 font-bold py-2.5 pl-2.5">
               {titels[0]}
             </p>
             {Started.map((item) => {
@@ -101,7 +101,7 @@ const ChannelsPanel = () => {
                     key={item.id}
                     className="flex items-center justify-between py-2.5 pl-2.5"
                   >
-                    <p className="text-sm font-bold text-dark-100">
+                    <p className="text-sm font-bold text-dark-100 dark:text-white">
                       {item.name}
                     </p>
                     <p className="w-[18px] h-[18px] rounded-md text-white bg-error-100 text-xs text-center content-center">
@@ -123,7 +123,7 @@ const ChannelsPanel = () => {
             })}
           </div>
           <div>
-            <p className="text-sm text-dark-100 font-bold py-2.5 pl-2.5">
+            <p className="text-sm text-dark-100 dark:text-gray-100 font-bold py-2.5 pl-2.5">
               {titels[1]}
             </p>
             {Channels.map((item) => {
@@ -143,7 +143,7 @@ const ChannelsPanel = () => {
                     key={item.id}
                     className="flex items-center justify-between py-2.5 pl-2.5"
                   >
-                    <p className="text-sm font-bold text-dark-100">
+                    <p className="text-sm font-bold text-dark-100 dark:text-white">
                       {item.name}
                     </p>
                     <p className="w-[18px] h-[18px] rounded-md text-white bg-error-100 text-xs text-center content-center">
@@ -165,7 +165,7 @@ const ChannelsPanel = () => {
             })}
           </div>
           <div>
-            <p className="text-sm text-dark-100 font-bold py-2.5 pl-2.5">
+            <p className="text-sm text-dark-100 dark:text-gray-100 font-bold py-2.5 pl-2.5">
               {titels[2]}
             </p>
             {Direct.map((item) => {
@@ -185,7 +185,7 @@ const ChannelsPanel = () => {
                     key={item.id}
                     className="flex items-center justify-between py-2.5 pl-2.5"
                   >
-                    <p className="text-sm font-bold text-dark-100">
+                    <p className="text-sm font-bold text-dark-100 dark:text-white">
                       {item.name}
                     </p>
                     <p className="w-[18px] h-[18px] rounded-md text-white bg-error-100 text-xs text-center content-center">
