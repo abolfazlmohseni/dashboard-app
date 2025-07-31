@@ -1,14 +1,10 @@
-import Header from "../components/header";
-import Modal from "../components/modal/modal";
-import Sidebar from "../components/Sidebar/Sidebar";
-import Selector from "../../../components/Selector";
 import { Suspense, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Overview from "../Overview/Overview";
-import Login from "../../login&more/login";
-import Sinup from "../../login&more/sinup";
-import GroupChat from "../GroupChat/GroupChat";
-import ChannelsPanel from "../GroupChat/Components/ChannelsPanel";
+import Overview from "../Panel/Overview/Overview";
+import Login from "../login&more/login";
+import Sinup from "../login&more/sinup";
+import GroupChat from "../Panel/GroupChat/GroupChat";
+
 const Main = () => {
   document.body.classList.add("bg-lightgray-100");
   document.body.classList.add("dark:bg-dark-100");
@@ -30,7 +26,18 @@ const Main = () => {
             <Overview StatusModal={StatusModal} toggleModal={toggleModal} />
           }
         />
-        <Route path="/GroupChat" element={<GroupChat StatusModal={StatusModal} toggleModal={toggleModal}/>} />
+        <Route
+          path="/GroupChat"
+          element={
+            <GroupChat StatusModal={StatusModal} toggleModal={toggleModal} />
+          }
+        />
+        <Route
+          path="/GroupChat"
+          element={
+            <GroupChat StatusModal={StatusModal} toggleModal={toggleModal} />
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Login />} />
         <Route path="/sinup" element={<Sinup />} />

@@ -1,6 +1,6 @@
-import Channels from "./components/Channels";
-import Direct from "./components/Direct";
-import { useInfo } from "../../../../context/Info";
+import Channels from "../components/Channels";
+import Direct from "../components/Direct";
+import { useInfo } from "../../../../../context/Info";
 const Chat = () => {
   const { info, setInfo } = useInfo();
   const checker = () => {
