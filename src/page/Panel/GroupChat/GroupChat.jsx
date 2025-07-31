@@ -1,5 +1,5 @@
 import { useInfo } from "../../../context/Info";
-import Chat from "./Chat";
+import Chat from "./Chat/desktop";
 import TraficSource from "./TraficSource/TraficSource";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/header";
@@ -12,7 +12,7 @@ const Overview = ({ StatusModal, toggleModal }) => {
     case 0:
       renderComponent = (
         <>
-          <div className="flex flex-col h-screen w-full sm:flex-row  items-center relative">
+          <div className="hidden sm:flex flex-col h-screen w-full sm:flex-row  items-center relative ">
             <Sidebar />
             <ChannelsPanel />
             <div
@@ -24,6 +24,9 @@ const Overview = ({ StatusModal, toggleModal }) => {
               <Chat />
             </div>
             <Modal onClick={toggleModal} state={StatusModal}></Modal>
+          </div>
+          <div className="sm:hidden flex">
+       
           </div>
         </>
       );
