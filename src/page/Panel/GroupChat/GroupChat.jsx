@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Header from "../components/header";
 import Modal from "../components/modal/modal";
 import ChannelsPanel from "./Components/ChannelsPanel";
+import Mchat from "./Chat/mobile/Mchat";
 const Overview = ({ StatusModal, toggleModal }) => {
   const { info, setInfo } = useInfo();
   var renderComponent;
@@ -26,7 +27,7 @@ const Overview = ({ StatusModal, toggleModal }) => {
             <Modal onClick={toggleModal} state={StatusModal}></Modal>
           </div>
           <div className="sm:hidden flex">
-       
+            <Mchat />
           </div>
         </>
       );
