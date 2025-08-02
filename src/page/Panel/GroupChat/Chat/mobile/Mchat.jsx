@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
+import Header from "./components/header";
 
 const Mchat = () => {
-    return (
-        <div></div>
-    );
-}
+  return <Header />;
+};
 
 export default Mchat;
