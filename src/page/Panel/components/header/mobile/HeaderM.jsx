@@ -1,4 +1,4 @@
-const Header = () => {
+const HeaderM = () => {
   return (
     <div className="w-full py-6 px-7 flex items-center justify-between bg-white dark:bg-darkgray-100">
       <div className="flex gap-x-4">
@@ -165,4 +165,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderM;

@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import Header from "../../../components/header/mobile/HeaderM";
 import Selector from "../../../../../components/Selector";
 import { useState } from "react";
 

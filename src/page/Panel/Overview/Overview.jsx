@@ -22,7 +22,7 @@ const Overview = ({ toggleModal, StatusModal }) => {
             <div
               className={`${
                 StatusModal ? "sm:w-[65%]" : "sm:w-full"
-              }  mx-6 md:mx-16 h-[92vh] transition-all duration-300 w-[95%]`}
+              }  mx-6 md:mx-16 h-[92vh] transition-all duration-300 w-[100%] sm:w-[95%]`}
             >
               <Header />
               <Selector
