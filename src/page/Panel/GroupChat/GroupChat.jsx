@@ -26,9 +26,9 @@ const Overview = ({ StatusModal, toggleModal }) => {
             </div>
             <Modal onClick={toggleModal} state={StatusModal}></Modal>
           </div>
-         <div>
-          <Header/>
-         </div>
+          <div>
+            <Header />
+          </div>
         </>
       );
       break;
@@ -51,10 +51,10 @@ const Overview = ({ StatusModal, toggleModal }) => {
       );
       break;
     case 2:
-      renderComponent = <Chat />;
+      renderComponent = <Sidebar />;
       break;
     case 3:
-      renderComponent = <Chat />;
+      renderComponent = <Sidebar />;
       break;
     default:
       renderComponent = <div>not Page</div>;
