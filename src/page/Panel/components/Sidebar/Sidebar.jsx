@@ -143,6 +143,7 @@ const Sidebar = () => {
       ...info,
       activePage: 0,
     });
+    console.log("sidbar");
   }, [pathname]);
   const chageTheme = () => {
     const theme = localStorage.getItem("theme");
