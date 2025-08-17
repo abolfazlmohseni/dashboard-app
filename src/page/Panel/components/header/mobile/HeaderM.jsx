@@ -1,8 +1,18 @@
+const chageTheme = () => {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
+};
 const HeaderM = () => {
   return (
     <div className="w-full py-6 px-7 flex items-center justify-between bg-white dark:bg-darkgray-100">
       <div className="flex gap-x-4">
-        <div className="w-[38px] h-[38px] rounded-xl flex items-center justify-center text-white border-2 border-gray-100/40">
+        <div className="w-[38px] h-[38px] rounded-xl flex items-center justify-center dark:text-white border-2 border-gray-100/40">
           <svg
             width="18"
             height="18"
@@ -35,7 +45,10 @@ const HeaderM = () => {
             <g mask="url(#mask0_576_16130)"></g>
           </svg>
         </div>
-        <div className="w-[38px] h-[38px] rounded-xl flex items-center justify-center text-white border-2 border-gray-100/40">
+        <div
+          onClick={chageTheme}
+          className="w-[38px] h-[38px] rounded-xl flex items-center justify-center dark:text-white border-2 border-gray-100/40"
+        >
           <svg
             width="20"
             height="20"
@@ -111,7 +124,7 @@ const HeaderM = () => {
       </div>
       <div className="text-dark-100 dark:text-white font-bold">home</div>
       <div className="flex items-center gap-4">
-        <div className="w-[38px] h-[38px] rounded-xl flex items-center justify-center text-white border-2 border-gray-100/40">
+        <div className="w-[38px] h-[38px] rounded-xl flex items-center justify-center dark:text-white border-2 border-gray-100/40">
           <svg
             width="18"
             height="18"

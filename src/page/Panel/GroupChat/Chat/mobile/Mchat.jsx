@@ -1,6 +1,6 @@
-import Header from "../../../components/header/mobile/HeaderM";
 import Selector from "../../../../../components/Selector";
 import { useState } from "react";
+import { useInfo } from "../../../../../context/Info";
 
 const titels = ["Started", "Channels", "Direct Messages"];
 const Started = [
@@ -69,12 +69,11 @@ const Direct = [
     id: 13,
   },
 ];
-
 const Mchat = () => {
   const [TitelSelected, setTitelSelected] = useState(0);
+  const { info, setInfo } = useInfo();
   return (
     <div className="flex flex-col w-full">
-      <Header />
       <div className="w-[90%] mx-auto">
         <Selector
           asli={true}
