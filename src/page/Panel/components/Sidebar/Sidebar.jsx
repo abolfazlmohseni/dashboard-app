@@ -166,12 +166,7 @@ const Sidebar = () => {
             <Link
               key={index}
               to={links[index]}
-              // onClick={() => {
-              //   setInfo({
-              //     ...info,
-              //     activePage: 0,
-              //   });
-              // }}
+              className={`${index === 5 ? "hidden sm:flex" : ""}`}
             >
               <div
                 className={`w-12 h-12 rounded-xl flex items-center justify-center hover:scale-110  transition-all  ${
