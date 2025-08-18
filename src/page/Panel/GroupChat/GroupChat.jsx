@@ -26,9 +26,10 @@ const Overview = ({ StatusModal, toggleModal }) => {
             </div>
             <Modal onClick={toggleModal} state={StatusModal}></Modal>
           </div>
-          <div>
+          <div className="sm:hidden">
             <Header />
             <Mchat />
+            <Sidebar />
           </div>
         </>
       );
